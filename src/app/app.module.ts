@@ -11,13 +11,19 @@ import { LoggedComponent } from './logged/logged.component';
 //service import needs
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { CookAddComponent } from './cook-add/cook-add.component';
+import { CookEditComponent } from './cook-edit/cook-edit.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoggedComponent
+    LoggedComponent,
+    CookAddComponent,
+    CookEditComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +32,10 @@ import {FormsModule} from '@angular/forms';
     FormsModule
     
   ],
+  exports:[
+    LoggedComponent
+  ],
+
   providers: [cookNService],
   bootstrap: [AppComponent]
 })

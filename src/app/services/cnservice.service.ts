@@ -8,11 +8,19 @@ import {Recipe} from "../models/recipe";
 })
 export class cookNService {
 
-  url:string = "http://localhost:3000/recipes"//backend url will go here when finished and connect the two together :D
+  url:string = "http://localhost:3000/recipes"//environment variables for this, abstraction, less tied down to a specific env//backend url will go here when finished and connect the two together :D
 
-  getRecipes(): Observable<Recipe[]>{
-    return this.http.get<Recipe[]>(this.url);
-  }
+
+// getRecipes(){
+//   this.http.get<Recipe[]>(this.url).subscribe(recipes => {
+//     this.recipes = recipes;
+//     console.log('Recipes', this.recipes)
+//   }) tried this it didn't work so I used what is below
+// }
+
+ getRecipes(): Observable<Recipe[]>{
+   return this.http.get<Recipe[]>(this.url);
+ }
 
   getRecipe(id:number):Observable<Recipe> {
     return this.http.get<Recipe>(this.url +"/"+ id);
