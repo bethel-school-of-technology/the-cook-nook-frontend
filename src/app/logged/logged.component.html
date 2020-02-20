@@ -1,11 +1,6 @@
 
 <div class="homenav">
   <a routerLink="/logged">Home</a>
-  <a routerLink="">Breakfast</a><!--Only shows breakfast recipes-->
-  <a routerLink="">Lunch</a><!--Only shows breakfast recipes-->
-  <a routerLink="">Dinner</a><!--Only shows Dinner recipes-->
-  <a routerLink="">Dessert</a><!--Only shows Dessert recipes-->
-  <a routerLink="">Beverages</a><!--Only shows Beverage recipes-->
 </div>
 
 <ul id="list">
@@ -18,16 +13,10 @@
       <li>Time to Make: {{recipe.time}}</li>
       <li>Ingredients: {{recipe.ing}}</li>     
       <li>Tools You'll Need: {{recipe.toolsNeeded}}</li> 
-            <li>Instructions:     <ol>
-              
-                  <li *ngFor="let instructs of recipe.instructs">
-               <div>{{instructs.name}}</div>
-               <div>{{instructs.subDesc}}</div>         
-                </li>
-              </ol>
-    </li>   
-      <button (click)="deleteRecipe(recipe.id)"><h2>Delete</h2></button>
-      <button><a [routerLink]="['edit', recipe.id]">Edit</a></button>
+      <li>Instructions: {{recipe.instructs}}</li>  
+      
+      <button (click)="deleteRecipe(recipe.id)"><h2>Delete Recipe</h2></button>
+      <button><a [routerLink]="['edit', recipe.id]">Edit Recipe</a></button>
     </div>
   </li>
 

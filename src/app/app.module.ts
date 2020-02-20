@@ -14,6 +14,11 @@ import {FormsModule} from '@angular/forms';
 import { CookAddComponent } from './cook-add/cook-add.component';
 import { CookEditComponent } from './cook-edit/cook-edit.component';
 import { NavComponent } from './nav/nav.component';
+//import { EditInsComponent } from './edit-ins/edit-ins.component';
+//import { InsEditComponent } from './ins-edit/ins-edit.component';
+//import { InstructsEditComponent } from './instructs-edit/instructs-edit.component';
+//import { InstructsAddComponent } from './instructs-add/instructs-add.component';
+//import { InstructsViewComponent } from './instructs-view/instructs-view.component';
 
 
 @NgModule({
@@ -24,6 +29,11 @@ import { NavComponent } from './nav/nav.component';
     CookAddComponent,
     CookEditComponent,
     NavComponent
+    //EditInsComponent,
+    //InsEditComponent,
+    //InstructsEditComponent,
+    //InstructsAddComponent,
+    //InstructsViewComponent
   ],
   imports: [
     BrowserModule,

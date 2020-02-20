@@ -1,6 +1,19 @@
 <div class="edit">
-    <h2>Edit Your Tracker</h2>
+    <h2>Edit Your Recipe</h2>
     <h3>Name: </h3><input [(ngModel)]="editRecipe.name">
     <br/>
+    <h3>Genre: </h3><input [(ngModel)]="editRecipe.type">
+    <br/>
+    <h3>Description: </h3><input [(ngModel)]="editRecipe.desc">
+    <br/>
+    <h3>Time to Make: </h3><input [(ngModel)]="editRecipe.time">
+    <br/>
+    <h3>Ingredients: </h3><input [(ngModel)]="editRecipe.ing">
+    <br/>
+    <h3>Tools You'll Need: </h3><input [(ngModel)]="editRecipe.toolsNeeded">
+    <br/>
+    <h3>Instructions: </h3><input [(ngModel)]="editRecipe.instructs">
+    
     <button (click)="saveRecipe()">Save</button>
     </div>
+    <!---Another component that edits only one instruction-->

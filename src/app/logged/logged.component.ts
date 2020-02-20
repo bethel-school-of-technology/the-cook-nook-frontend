@@ -13,6 +13,8 @@ export class LoggedComponent implements OnInit {
 
   recipes: Recipe[];
 
+
+
   getRecipes(): void {
     this.cookNService.getRecipes().subscribe(r=> (this.recipes = r));    }
 
@@ -23,10 +25,12 @@ export class LoggedComponent implements OnInit {
 
 
 
+
   constructor(private cookNService: cookNService) { }
 
   ngOnInit() { 
     this.getRecipes();
+
   }
  
 

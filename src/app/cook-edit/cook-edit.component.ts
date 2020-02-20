@@ -27,6 +27,8 @@ export class CookEditComponent implements OnInit {
     .subscribe(param => {this.cookNService
     .getRecipe(+param["id"])
     .subscribe(r=> (this.editRecipe = r))})
+
+    console.log(this.editRecipe)
   }
 
 }
