@@ -5,9 +5,9 @@ export class Recipe {
             name: string;
             desc: string;
             time: string;
-            ing: [];
-            toolsNeeded: [];
-            instructs: [];
+            ing: string;
+            toolsNeeded: string;
+            instructs: string;
             }
             //just recipe add field/ type field radio
         

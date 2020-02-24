@@ -13,7 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { CookAddComponent } from './cook-add/cook-add.component';
 import { CookEditComponent } from './cook-edit/cook-edit.component';
-import { NavComponent } from './nav/nav.component';
+import { LoginComponent } from './login/login.component';
+import { AboutPageComponent } from './about-page/about-page.component';
+//import { NavComponent } from './nav/nav.component';
 //import { EditInsComponent } from './edit-ins/edit-ins.component';
 //import { InsEditComponent } from './ins-edit/ins-edit.component';
 //import { InstructsEditComponent } from './instructs-edit/instructs-edit.component';
@@ -28,7 +30,9 @@ import { NavComponent } from './nav/nav.component';
     LoggedComponent,
     CookAddComponent,
     CookEditComponent,
-    NavComponent
+    LoginComponent,
+    AboutPageComponent
+    //NavComponent
     //EditInsComponent,
     //InsEditComponent,
     //InstructsEditComponent,
