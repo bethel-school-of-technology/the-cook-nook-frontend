@@ -1,0 +1,21 @@
+<div class="wrapper">
+<div class="header"><h1>Cook Nook</h1></div>
+    
+
+<div class="About">
+    <h3>Welcome to Cook Nook. The nifty app that helps you organize old recipes
+        and record their step by step instructions for later use! Cookbooks fall apart
+        after being handed down from generation to generation. Now you'll never lose  
+        Grandma's famous Pecan Pie! 
+        <br>
+        <div class="signup">
+        <form>
+        <h2>Sign Up below or <a routerLink="/login">Login</a></h2><!--put link to login page here-->
+            <label for="username">Username:</label><input type="text" placeholder="Username" [(ngModel)]="newUser.username" name="username"><br>
+            <label for="password">Password:</label><input type="password" placeholder="Password" [(ngModel)]="newUser.password" name="password"><br>
+            <br>
+            <button (click)="addUser()">Get Cookin'</button><!--Links to the new Cook Nook Profile when Authorized-->
+            <!--Will instead lead you to the login component-->
+        </form>
+        </div>
+    

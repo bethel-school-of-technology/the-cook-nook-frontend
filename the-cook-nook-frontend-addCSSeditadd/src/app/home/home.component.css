@@ -1,0 +1,50 @@
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+
+.wrapper {
+    background-color: rgb(223, 140, 140);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+    padding: 7px;
+
+} 
+
+.header {
+    
+    font-family: "Times New Roman", Arial, Helvetica, sans-serif ;
+    font-size: 2.5em;
+    background-color:rgb(238, 227, 212) ;
+    border-radius: 15px;
+    border: 3px solid  #AC2929;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(46, 20, 119);
+    
+ }
+
+form{
+    text-align: center;
+}
+
+a:hover {
+    color: white;
+}
+
+button {
+    color: white;
+    background-color: rgb(46, 20, 119);
+}
+
+button:hover {
+    background-color: rgb(238, 227, 212);
+}
+
+input{
+    background-color: rgb(238, 227, 212);
+}
