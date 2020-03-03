@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    height: 100%;
+    background-color: #df4848;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.2) 35px, rgba(255, 255, 255, 0.2) 70px), repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,0.4) 35px, rgba(255,255,255,0.4) 70px);
+    background-attachment: fixed;
+  }

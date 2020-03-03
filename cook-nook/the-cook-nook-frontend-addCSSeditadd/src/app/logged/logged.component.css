@@ -1,0 +1,175 @@
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+
+button {
+    background-color: navy;
+    border-radius: 5px;
+    border: 2px solid  rgb(238, 227, 212);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 1.3em;
+}
+
+#homenav {
+    background-color: #fff;
+}
+
+#post {
+  
+  background-color:rgb(238, 227, 212);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid  #AC2929;
+  text-align: left;
+  list-style: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.header {
+    
+    font-family: "Times New Roman", Arial, Helvetica, sans-serif ;
+   
+    background-color:rgb(238, 227, 212) ;
+    border-radius: 15px;
+    border: 3px solid  #AC2929;
+}
+ h1 {
+      font-size: 35px;
+    text-align: center;
+    color: rgb(46, 20, 119);
+    
+ }
+ h4 {
+     font-size: 25px;
+     text-align: center;
+     color:rgb(46, 20, 119) ;
+ }
+
+
+li {
+    list-style: none;
+    
+}
+.title {
+    color: navy;
+    font-size: 1.3em;
+}
+
+a {
+    color: white;
+    text-emphasis: none;
+    text-decoration: rgb(238, 227, 212);
+    border-radius: 5px;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+}
+button:hover{
+    color:white;
+    background-color: rgb(117, 24, 24);
+  }
+.wrapper {
+    background-color:  rgb(223, 140, 140);
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+/*Laptop/Desktop*/
+@media screen and (min-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio:1){
+    #list {
+        flex: 50%;
+        
+       vertical-align: top;
+    }
+    li {
+        max-width: 500px;
+    }
+    .wrapper {
+        background-color: rgb(223, 140, 140);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+}
+
+/*iPad - portrait and landscape*/
+@media only screen 
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) 
+and (-webkit-min-device-pixel-ratio: 1){
+    #list {
+        display: flex;
+        flex: 50%;
+        
+       vertical-align: top;
+    }
+    li {
+        max-width: 400px;
+    }
+    .wrapper {
+ 
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+}
+
+@media only screen 
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape) 
+and (-webkit-min-device-pixel-ratio: 1){
+        #list {
+            display: flex;
+            flex: 100%;
+            vertical-align: middle;
+        }
+        li {
+            max-width: 400px;
+        }
+        .wrapper {
+           
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+}
+
+/*Phones*/
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    #list {
+        display: flex;
+        max-width: 100%;
+        flex: 100%;
+    }
+    li {
+        max-width: 25%;
+    }
+    .wrapper {
+       
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    
+}
+
+
+
+  
