@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { cookNService } from '../services/cnservice.service'
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _cookNService: cookNService) { }
 
   ngOnInit() {
   }

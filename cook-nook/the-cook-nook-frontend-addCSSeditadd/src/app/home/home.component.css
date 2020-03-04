@@ -47,7 +47,13 @@ button:hover {
 
 input{
     background-color: rgb(238, 227, 212);
+    width: 20%;
+    padding: 2px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
+
 
 h2 {
     text-align: center;

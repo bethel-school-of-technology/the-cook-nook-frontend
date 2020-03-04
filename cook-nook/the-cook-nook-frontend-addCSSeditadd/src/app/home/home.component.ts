@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { cookNService } from '../services/cnservice.service';
 import { Router } from '@angular/router';
-import { User } from '../models/user';
+//import { User } from '../models/user';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +11,17 @@ import { User } from '../models/user';
 export class HomeComponent implements OnInit {
   newUser = {};
 
-  constructor(private cookNService: cookNService, private router: Router) { }
+  constructor(private _cookNService: cookNService, private router: Router) { }
 
   addUser(){
-    this.cookNService.addUser(this.newUser).subscribe(r=>(this.router.navigate(['logged'])))
-  }
+    this._cookNService.addUser(this.newUser).subscribe(
+    res => {
+      localStorage.setItem('token', res.token)
+      this.router.navigate(['logged'])
+    },  //should store token in the browser??
+    err => console.log(err)
+
+    )}
 
   ngOnInit() {
   }

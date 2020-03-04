@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {Recipe} from "../models/recipe";
+import { Router } from '@angular/router';
 import {User} from '../models/user';
-//import { InstructsAddComponent } from '../instructs-add/instructs-add.component';
-//import { InstructsEditComponent} from '../instructs-edit/instructs-edit.component';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,11 +22,26 @@ export class cookNService {
     return this.http.post<any>(this.loginUrl, user)
   }
 
+  loggedIn(){
+    return !!localStorage.getItem('token')
+  }
+
+  getToken(){
+    return localStorage.getItem('token');
+  }
+
+  logoutUser() {
+    localStorage.removeItem('token')
+    this.router.navigate(['/home'])
+  }
+
+
+  
   private getRecipesUrl = "http://localhost:3000/api/logged"
 
   getRecipes(): Observable<Recipe[]>{
    return this.http.get<Recipe[]>(this.getRecipesUrl);
-  }
+  } 
 
   private getRecipeUrl = "http://localhost:3000/api/logged/id"
   getRecipe(id:number):Observable<Recipe> {
@@ -52,5 +67,6 @@ export class cookNService {
   
   
  
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, 
+              private router: Router) { }
 }
