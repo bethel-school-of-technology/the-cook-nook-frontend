@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {User} from './models/user';
+import { cookNService } from './services/cnservice.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ export class AppComponent  {
 
   title: string = 'Cook Nook';
   
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient, 
+              private _cookNService: cookNService){}
 
   ngOnInit() {}
 

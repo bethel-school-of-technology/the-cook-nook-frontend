@@ -1,17 +1,6 @@
-<div class="wrapper">
-<div class="header"><h1>Cook Nook</h1>
-<hr><h4>Your Online Cookbook</h4> </div>
-
-<div class="homenav">
-  <button><a routerLink="/logged">Home</a></button>
-  <button><a routerLink="/add">Add New Recipe</a></button>
-  <button><a routerLink="/about">About</a></button>
-  <button><a routerLink="/home" (click)="logoutUser()">Logout</a></button>
-</div>
-
 <ul id="list">
   
-  <li *ngFor="let recipe of recipes">
+  <li *ngFor="let recipe of user.recipe">
     <div id="post" >
       <li><div class="title">Name:</div>{{recipe.name}}</li>
       <hr>
@@ -28,5 +17,3 @@
   </li>
 
 </ul>
-
-</div>

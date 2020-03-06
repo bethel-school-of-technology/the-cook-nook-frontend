@@ -3,6 +3,7 @@ import { cookNService } from '../services/cnservice.service';
 import { Router } from '@angular/router';
 import {Recipe} from '../models/recipe';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { User } from '../models/user';
 //import { User } from '../models/user';
 
 @Component({

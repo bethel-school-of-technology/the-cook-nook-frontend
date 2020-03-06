@@ -39,6 +39,10 @@ a:hover {
 button {
     color: white;
     background-color: rgb(46, 20, 119);
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: grey;
+    font-size: 1em;
 }
 
 button:hover {

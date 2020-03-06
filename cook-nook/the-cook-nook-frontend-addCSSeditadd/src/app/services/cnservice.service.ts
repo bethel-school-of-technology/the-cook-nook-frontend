@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {Recipe} from "../models/recipe";
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'; 
+import { map } from 'rxjs/operators';
 import {User} from '../models/user';
+
 
 @Injectable({
   providedIn: 'root'
@@ -37,10 +39,13 @@ export class cookNService {
 
 
   
+  
   private getRecipesUrl = "http://localhost:3000/api/logged"
 
   getRecipes(): Observable<Recipe[]>{
-   return this.http.get<Recipe[]>(this.getRecipesUrl);
+   return this.http.get<Recipe[]>(this.getRecipesUrl).pipe(
+    map(data => data.map(data => new Recipe().deserialize(data))));
+
   } 
 
   private getRecipeUrl = "http://localhost:3000/api/logged/id"
@@ -68,5 +73,6 @@ export class cookNService {
   
  
   constructor(private http: HttpClient, 
-              private router: Router) { }
+              private router: Router,
+              ) { }
 }
