@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div class="header">
+      <h1>Cook Nook</h1>
+      
+    
+    </div>
+    <ul class="homenav">
+      <a class="nav-link" routerLink="/" *ngIf="!_cookNService.loggedIn()">Home</a>
+      <a class="nav-link" routerLink="/logged" *ngIf="_cookNService.loggedIn()">My Recipes</a>
+      <a class="nav-link" routerLink="/about">About</a>
+      <a class="nav-link" routerLink="/add" *ngIf="_cookNService.loggedIn()">Add New Recipe</a>
+      <a class="nav-link log" routerLink="login" *ngIf="!_cookNService.loggedIn()">Login</a>
+      <a class="nav-link log" routerLink="/home" *ngIf="_cookNService.loggedIn()"(click)="_cookNService.logoutUser()">Logout</a>
+    </ul>
+
+<div>
+
+<router-outlet></router-outlet>
