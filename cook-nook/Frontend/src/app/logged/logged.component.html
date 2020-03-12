@@ -1,0 +1,19 @@
+<ul id="list">
+  
+  <li *ngFor="let recipe of recipes">
+    <div id="post" >
+      <li><div class="title">Name:</div>{{recipe.name}}</li>
+      <hr>
+      <li><div class="title">Type:</div> {{recipe.type}}</li>
+      <li><div class="title">Description:</div> {{recipe.desc}}</li>
+      <li><div class="title" >Time to Make:</div> {{recipe.time}}</li>
+      <li><div class="title">Ingredients:</div> {{recipe.ing}}</li>     
+      <li><div class="title">Tools You'll Need:</div> {{recipe.toolsNeeded}}</li> 
+      <li><div class="title">Instructions:</div> {{recipe.instructs}}</li>  
+      <div class="buttons">
+      <button class="delete" (click)="deleteRecipe(recipe.id)">Delete Recipe</button>
+      <button><a [routerLink]="['edit', recipe.id]">Edit Recipe</a></button>
+    </div></div>
+  </li>
+
+</ul>
