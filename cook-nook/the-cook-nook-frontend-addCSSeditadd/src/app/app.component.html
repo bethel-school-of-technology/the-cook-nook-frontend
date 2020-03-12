@@ -6,6 +6,7 @@
     </div>
     <ul class="homenav">
       <a class="nav-link" routerLink="/" *ngIf="!_cookNService.loggedIn()">Home</a>
+      <a class="nav-link" routerLink="/logged" *ngIf="_cookNService.loggedIn()">My Recipes</a>
       <a class="nav-link" routerLink="/about">About</a>
       <a class="nav-link" routerLink="/add" *ngIf="_cookNService.loggedIn()">Add New Recipe</a>
       <a class="nav-link log" routerLink="login" *ngIf="!_cookNService.loggedIn()">Login</a>

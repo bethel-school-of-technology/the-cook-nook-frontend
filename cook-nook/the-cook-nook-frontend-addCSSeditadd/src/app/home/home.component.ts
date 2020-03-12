@@ -16,10 +16,9 @@ export class HomeComponent implements OnInit {
   addUser(){
     this._cookNService.addUser(this.newUser).subscribe(
     res => {
-      localStorage.setItem('token', res.token)
-      this.router.navigate(['logged'])
+      this.router.navigate(['login'])
     },  //should store token in the browser??
-    err => console.log(err)
+    err => document.getElementById('error').innerHTML = "This user already exists!"
 
     )}
 

@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token', res.token)
         this.router.navigate(['logged'])
       }, //stores token in the browser
-      err => console.log(err)
+      err => document.getElementById('error').innerHTML = "Incorrect Username or Password"
     );
   }
 
