@@ -59,7 +59,7 @@ export class cookNService {
     return this.http.post<Recipe>(this.addRecipeUrl, recipe);
   }
 
-  private deleteRecipeUrl = "http://localhost:3000/api/logged/delete/:_id"
+  private deleteRecipeUrl = "http://localhost:3000/api/logged/:recipeId"
   deleteRecipe(id:number): Observable<Recipe> {
     return this.http.delete<Recipe>(this.deleteRecipeUrl);
   }
