@@ -1,0 +1,34 @@
+{
+  "recipes": [
+    {
+      "id": 123,
+      "name": "Breakfast Burrito",
+      "type": "Breakfast",
+      "desc": "A heart healthy breakfast that's easy to make",
+      "time": "30 minutes",
+      "ing": "Bacon, Sausage, Eggs, Cheddar Cheese, Chopped Onion, Chopped Green Pepper, Chopped Red Pepper, Butter, Salt and Pepper",
+      "toolsNeeded": "Frying Pan, Spatula, Tongs, Plate, Cutting Board, Medium Knife",
+      "instructs": " First, cook meat and eggs. Then saute the chopped veggies in a frying pan with the butter. Once both are done, combine with the heat off. Add Cheddar Cheese. Add contents to a tortilla with your choice of condiments. Enjoy!"
+    },
+    {
+      "name": "Pancakes",
+      "type": "Breakfast",
+      "desc": "A delightful breakfast, fan favorite!",
+      "time": "About 30 minutes prepare time",
+      "ing": "Pancake mix, butter, maple syrup, fruit(optional), whipped cream, (you can also make bacon and eggs with this meal).",
+      "toolsNeeded": "Frying pan or griddle, spatula, plates, butter knife, mixing bowl, large spoon, whisk, and measuring cups of 1 cup and 1/4th cup.",
+      "instructs": "Make as directed on the package you chose.",
+      "id": 124
+    },
+    {
+      "name": "Zoo Cakes",
+      "type": "Special Dessert",
+      "desc": "A cake with chocolate animals on it for a party at the zoo. ",
+      "time": "1 hour prepare time 40 minutes cooking time.",
+      "ing": "Eggs, modeling chocolate, etc.",
+      "toolsNeeded": "Mixing bowl etc.",
+      "instructs": "make",
+      "id": 126
+    }
+  ]
+}

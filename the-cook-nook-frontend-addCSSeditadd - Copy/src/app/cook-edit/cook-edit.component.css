@@ -1,0 +1,47 @@
+button {
+    background-color:navy ; 
+    border: none;
+    color: white;
+    padding: 15px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    
+  }
+  button:hover{
+    color:black;
+    background-color: white;
+  }
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+.edit {
+    flex-direction: column;
+    position:center ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    float: center;
+    background-color:rgb(223, 140, 140) ;
+    padding: 3px;
+    margin: 15px;
+    
+}
+ input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+ }
+h2 {
+    text-align: center;
+    font-family: "Times New Roman", Arial, Helvetica, sans-serif ;
+    font-size: 2.5em;
+    background-color:rgb(238, 227, 212) ;
+    border-radius: 15px;
+    border: 3px solid  #AC2929;
+    color: rgb(46, 20, 119);
+}

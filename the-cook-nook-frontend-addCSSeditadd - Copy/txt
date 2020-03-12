@@ -1,0 +1,51 @@
+
+    <script>
+           app = angular.module('choose',[]);
+  app.controller('myCtrl', function($scope){
+    $scope.types = ["Breakfast","Lunch","Dinner","Dessert","Beverages"]
+  })
+    </script>
+</ul>
+</div>
+
+<div class="nav"></div>
+
+<h2>Your List of :</h2>
+<div>
+
+<ul>
+    <a routerLink="/add">Add</a>
+    <li *ngFor="let recipe of recipes">
+    <div id="post">
+        Name: {{recipe.name}}
+        <div ng-app="choose" ng-controller="myCtrl">
+            <select ng-model="type" ng-options="item for item in types">
+            </select>
+        </div>
+        Description: {{bfast.desc.recipe}}
+        Time to Make: {{bfast.time.recipe}}
+        Ingredients: <ul *ngFor ="let ing of recipe.ing" >{{ing}}</li> 
+        Tools You'll Need: <ul *ngFor ="let toolsNeeded of recipe.toolsNeeded"> {{toolsNeeded}}</ul>
+        <button (click)="deleteRecipe(recipe.id)"><h2>Delete</h2></button>
+        <button><a [routerLink]="['/edit', recipe.id]"><h2>Edit</h2></a></button> 
+    </div>
+    </li>
+  h2>Your List of Recipes</h2>
+  <div id="add">
+    <a routerLink="/add">Add Recipe</a>
+    <li *ngFor="let recipe of recipes">
+      <div id="post">
+        Name: {{recipe.name}}
+        <div ng-app="choose" ng-controller="myCtrl">
+          <select ng-model="type" ng-options="item for item in types">LIST</select>
+        </div>
+        Description: {{recipe.desc}}
+        Time to Prepare: {{recipe.time}}
+        Ingredients: <ul *ngFor="let ing of recipe.ing"><li>{{ing}}</li></ul>
+        Tools You'll Need: <ul *ngFor="let toolsNeeded of recipe.toolsNeeded"><li>{{toolsNeeded}}</li></ul>
+        <button (click)="deleteRecipe(recipe.id)"><h2>Delete</h2></button>
+        <button><a [routerLink]="['/edit', recipe.id]"><h2>Edit</h2></a>
+        </button>
+      </div>
+    </li>
+  </div>

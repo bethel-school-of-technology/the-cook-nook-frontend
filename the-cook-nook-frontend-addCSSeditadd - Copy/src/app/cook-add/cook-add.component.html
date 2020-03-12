@@ -1,0 +1,11 @@
+<div class="add">
+    <h2>Add a New Recipe:</h2>
+    <h3>Name:</h3><input [(ngModel)]="newRecipe.name">
+    <h3>Genre:</h3><input [(ngModel)]="newRecipe.type">
+    <h3>Description:</h3><input [(ngModel)]="newRecipe.desc">
+    <h3>Time to Make:</h3><input [(ngModel)]="newRecipe.time">
+    <h3>Ingredients:</h3><input [(ngModel)]="newRecipe.ing">
+    <h3>Tools You'll Need:</h3><input [(ngModel)]="newRecipe.toolsNeeded">
+    <h3>Instructions:</h3><input [(ngModel)]="newRecipe.instructs">
+    <button (click)="addRecipe()">Add</button>
+</div>
